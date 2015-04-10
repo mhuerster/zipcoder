@@ -1,0 +1,17 @@
+<h1>Look Up a Zip Code</h1> 
+
+<%= form_tag("/lookup", method: "get") do %>
+  <%= label_tag(:zipcode, "Search for:") %>
+  <%= text_field_tag(:zipcode, nil, :placeholder => "zipcode") %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+  <% end %>
+
+<% unless @zipcode.nil? %>
+<h3><%= @zipcode.zipcode.to_s %> is located in <%= @zipcode.city %>, <%= @zipcode.state %></h3>
+<% end %>
+
+<div id="map-canvas"></div>
