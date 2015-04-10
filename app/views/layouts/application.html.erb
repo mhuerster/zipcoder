@@ -4,11 +4,13 @@
   <title>ZipcodeLocator</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <%= favicon_link_tag "map.png" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="container">
+  <%= yield %>
+<h6>Favicon by FatCow Web Hosting (http://www.fatcow.com/free-icons/) [<a href="http://creativecommons.org/licenses/by/3.0/us/deed.en">CC BY 3.0 us</a>], <a href="http://commons.wikimedia.org/wiki/File%3AFarm-Fresh_map.png">via Wikimedia Commons</a></h6>
+</div>
 </body>
 </html>
